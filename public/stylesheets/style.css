@@ -1,0 +1,77 @@
+body {
+  padding: 0 2em;
+  padding-bottom: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif !important;
+  background: #2C72C7;
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+.footer {
+	/*line-height: 2em;*/
+	text-align: center;
+	font-size: smaller;
+}
+
+.gallery {
+	text-align: center;
+	margin: 0 auto;
+	/*background: white;*/
+}
+
+.gallery img {
+	width: 100%;
+	/*box-shadow: 0 0 3px #666;*/
+	margin: 0 !important;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.imgcontainer {
+	width: 100%;
+	margin: 1em auto;
+	padding: 1em;
+	/*background: white;*/
+	/*box-shadow: 0 0 8px black;*/
+	/*border-radius: 0.4em;*/
+	text-align: center;
+}
+
+.imgcontainer img {
+	width: auto;
+	max-width: 90%;
+	max-height: 84%;
+}
+
+.imgcontainer+ h1 {
+	text-align: center;
+}
+
+.imgbackground {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: 0.3;
+}
+
+.box img {
+	/*width: 100% !important;
+	height: 100% !important;*/
+}
+
+.controls {
+	width: 100%;
+	margin-bottom: 2.5em;
+}
+
+.controls a:last-child {float:right;}

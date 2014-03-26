@@ -1,0 +1,34 @@
+extends layout
+
+mixin controls
+		p.controls
+			-if (page > 1) {
+				a(href='/gallery/#{parseInt(page)-1}') Página anterior
+			-}
+			a(href='/gallery/#{parseInt(page)+1}') Página siguiente
+
+block content
+	script(src='/javascripts/show_images.js')
+	script(src='/javascripts/jquery.grid-a-licious.js')
+	p: a(href='/') Atrás
+	+controls
+	.wrapper.gallery
+		-imagenes.forEach(function(item){
+			.item
+				a(href='/gallery/show/#{item.split(".")[0]}')
+					img(src='#{origin}#{item}', style='opacity: 0')
+		-});
+	+controls
+
+	script.
+		(function() {
+			$(".gallery").gridalicious({
+				selector: ".item",
+				Width: 220,
+				animate: true,
+				gutter: 0,
+				animationOptions: {
+					speed: 100
+				},
+			});
+		}).call(this);

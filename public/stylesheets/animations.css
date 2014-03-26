@@ -1,0 +1,90 @@
+/* animaciones.css */
+
+.animado .fondo {
+	animation-name: slideFromBottom;
+	animation-duration: 1s;
+	animation-fill-mode: backwards;
+}
+
+.animado .transparencia,
+.animado .contenedor {
+	animation-name: fadeInFromBottom;
+	animation-duration: 0.5s;
+	animation-delay: 1.3s;
+	animation-fill-mode: backwards;
+}
+
+.animado .titulo {
+	animation-name: fadeInFromRight;
+	animation-duration: 1s;
+	animation-delay: 1.6s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: backwards;
+}
+
+.animado .detalles {
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-delay: 1.9s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: backwards;
+
+}
+
+@keyframes fadeIn {
+	0% {
+		position: static;
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInFromRight {
+	0% {
+		position: static;
+		transform: translateX(100%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+
+@keyframes slideFromRight {
+	0% {
+		position: static;
+		transform: translateX(100%);
+	}
+
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes slideFromLeft {
+	0% {
+		position: static;
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes slideFromBottom {
+	0% {
+		position: static;
+		transform: translateY(200%);
+	}
+
+	100% {
+		transform: translateY(0%);
+	}
+}
+

@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	style.
+		body {background: #323232;}
+	link(rel='stylesheet', href='/stylesheets/filters.css')
+	script(src='/javascripts/show_images.js')
+
+	.imgbackground.some-blurry(style='background: url(#{origin}#{image}); background-size: cover')
+
+	a(href='/gallery/#{page}') Atrás
+
+	// Contenedor de la imagen
+	.imgcontainer.gallery
+		//.imgcontainer.gallery
+		img(src='#{origin}#{image}', style='opacity: 0')
+		//- h1= image

@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+    script(src='/javascripts/prefixfree.min.js')
+    //- link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/gran-contenedor.css')
+    script(src='/javascripts/jquery.js')
+  body
+    .gran-contenedor
+      .header
+        h1= title
+      .main
+        block content
+      .footer Developed as a NodeJS test by Kevin Pérez
+
+
