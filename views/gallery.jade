@@ -3,9 +3,9 @@ extends layout
 mixin controls
 	p.controls
 		-if (page > 1) {
-			a(href='/gallery/#{parseInt(page)-1}') Página anterior
+			a(href='/gallery/#{parseInt(page)-1}') Previous page
 		-}
-		a(href='/gallery/#{parseInt(page)+1}') Página siguiente
+		a(href='/gallery/#{parseInt(page)+1}') Next page
 
 block content
 	script(src='/javascripts/show_images.js')
