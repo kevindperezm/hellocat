@@ -29,7 +29,7 @@ exports.list = function(req, res) {
 		i++;
 	}
 
-	knuth = require("includes/knuth-shuffle");
+	knuth = require("knuth-shuffle");
 	imagenes = knuth.knuthShuffle(imagenes.slice(0));
 
 	// console.log(imagenes);
