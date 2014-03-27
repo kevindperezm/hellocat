@@ -1,17 +1,14 @@
-imageCounter = 0;
-imageList = [];
-imageInterval = 50;
-
 $(document).ready(function(e){
-	imageList = $(".gallery img"); 
-	// setTimeout(showImage, imageInterval);
-	imageList.on("load", showImage);
-});
-
-function showImage() {
-	// if (imageCounter < imageList.length) {
-		// $(imageList[imageCounter++])
+	function showImage() {
 		$(this).css("opacity", 1);
-		// setTimeout(showImage, imageInterval);
-	// }
-}
+	}
+
+	function errorImage() {
+		$(this).attr("src", "/images/imageNotFound.jpg");
+		showImage();	
+	}
+
+	var imageList = $(".gallery img"); 
+	imageList.on("load", showImage)
+	.on("error", errorImage);
+});

@@ -1,11 +1,11 @@
 extends layout
 
 mixin controls
-		p.controls
-			-if (page > 1) {
-				a(href='/gallery/#{parseInt(page)-1}') Página anterior
-			-}
-			a(href='/gallery/#{parseInt(page)+1}') Página siguiente
+	p.controls
+		-if (page > 1) {
+			a(href='/gallery/#{parseInt(page)-1}') Página anterior
+		-}
+		a(href='/gallery/#{parseInt(page)+1}') Página siguiente
 
 block content
 	script(src='/javascripts/show_images.js')
@@ -24,7 +24,7 @@ block content
 		(function() {
 			$(".gallery").gridalicious({
 				selector: ".item",
-				Width: 220,
+				Width: 180,
 				animate: true,
 				gutter: 0,
 				animationOptions: {
